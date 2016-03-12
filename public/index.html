@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular/Node Todo</title>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="js/services/todos.js"></script>    <!--Load our todo service-->
+    <script src="js/controllers/main.js"></script>  <!--Load our controllers-->
+</head>
+<body ng-app="todoList" ng-controller="MainCtrl as ctrl">
+
+<div id="mainPage">
+    <div id="header">
+        <h1>This is header</h1>
+    </div>
+    <div id="todolist">
+        <div>
+            <form>
+                <input type="text" ng-model="ctrl.formData.text">
+            </form>
+        </div>
+        <div ng-repeat="todo in ctrl.todos">
+            <label>
+                <input type="checkbox" ng-click="ctrl.deleteTodo(todo._id)">
+                {{todo.text}}
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Add Todo" ng-click="ctrl.createTodo()" required>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "todo application",
+  "description": "Simple Todo Application using mean stack",
+  "main": "server.js",
+  "authors": [
+    "Tauqeer"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "mean",
+    "angular"
+  ],
+  "moduleType": [],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}
